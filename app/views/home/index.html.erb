@@ -13,9 +13,9 @@
   <div class="row">
     <% @info_boxes.each do |info_box| %>
       <div class="col-lg-4 callout">
-        <span class="icon icon-stack"></span>
-        <h2>Bootstrap 3</h2>
-        <p>Shield Theme is powered by Bootstrap 3. The incredible Mobile First Framework is the best option to run your website. </p>
+        <span class="icon icon-<%= info_box.icon %>"></span>
+        <h2><%= info_box.title %></h2>
+        <p><%= info_box.content %></p>
       </div><!-- col-lg-4 -->
     <% end %>
 
