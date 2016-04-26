@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Icon:</strong>
+  <%= @info_box.icon %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @info_box.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @info_box.content %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @info_box.active %>
+</p>
+
+<%= link_to 'Edit', edit_info_box_path(@info_box) %> |
+<%= link_to 'Back', info_boxes_path %>

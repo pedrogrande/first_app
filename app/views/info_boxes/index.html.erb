@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Info Boxes</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Icon</th>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Active</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @info_boxes.each do |info_box| %>
+      <tr>
+        <td><%= info_box.icon %></td>
+        <td><%= info_box.title %></td>
+        <td><%= info_box.content %></td>
+        <td><%= info_box.active %></td>
+        <td><%= link_to 'Show', info_box %></td>
+        <td><%= link_to 'Edit', edit_info_box_path(info_box) %></td>
+        <td><%= link_to 'Destroy', info_box, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Info box', new_info_box_path %>
